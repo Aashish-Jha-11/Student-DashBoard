@@ -1,0 +1,136 @@
+.authContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 60px);
+  padding: 24px;
+  background-color: #f5f5f7;
+}
+
+.authCard {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 32px;
+  width: 100%;
+  max-width: 420px;
+  transition: transform 0.3s ease;
+}
+
+.authCard:hover {
+  transform: translateY(-4px);
+}
+
+.authTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.authForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formGroup label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1d1d1f;
+}
+
+.inputField {
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #d2d2d7;
+  font-size: 16px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.inputField:focus {
+  border-color: #0a84ff;
+  box-shadow: 0 0 0 2px rgba(10, 132, 255, 0.15);
+  outline: none;
+}
+
+.authButton {
+  background-color: #0a84ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 8px;
+}
+
+.authButton:hover {
+  background-color: #007aff;
+}
+
+.authButton:disabled {
+  background-color: #76baff;
+  cursor: not-allowed;
+}
+
+.demoButton {
+  background-color: transparent;
+  color: #0a84ff;
+  border: 1px solid #0a84ff;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  margin-top: 16px;
+  width: 100%;
+}
+
+.demoButton:hover {
+  background-color: rgba(10, 132, 255, 0.1);
+}
+
+.errorMessage {
+  background-color: rgba(255, 59, 48, 0.1);
+  color: #ff3b30;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.authMessage {
+  font-size: 14px;
+  color: #86868b;
+  text-align: center;
+  margin-top: 24px;
+}
+
+@media (max-width: 480px) {
+  .authCard {
+    padding: 24px;
+  }
+  
+  .authTitle {
+    font-size: 20px;
+  }
+  
+  .inputField {
+    padding: 10px 14px;
+  }
+  
+  .authButton {
+    padding: 12px;
+  }
+}
