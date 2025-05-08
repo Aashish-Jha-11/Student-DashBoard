@@ -127,11 +127,11 @@ const StudentDetails = () => {
             </div>
             <div className={styles.detailsRow}>
               <div className={styles.detailsLabel}>Phone:</div>
-              <div className={styles.detailsValue}>+1 (555) 123-4567</div>
+              <div className={styles.detailsValue}>{student.phone}</div>
             </div>
             <div className={styles.detailsRow}>
               <div className={styles.detailsLabel}>Address:</div>
-              <div className={styles.detailsValue}>123 Campus Drive, University City</div>
+              <div className={styles.detailsValue}>{student.address}</div>
             </div>
           </div>
         </div>
