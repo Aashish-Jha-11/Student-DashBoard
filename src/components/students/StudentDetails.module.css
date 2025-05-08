@@ -1,0 +1,241 @@
+.detailsContainer {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.detailsHeader {
+  margin-bottom: 24px;
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  color: #0a84ff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.backButton:hover {
+  color: #007aff;
+  text-decoration: underline;
+}
+
+.studentProfile {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.profileHeader {
+  display: flex;
+  padding: 32px;
+  background-color: #f5f5f7;
+  border-bottom: 1px solid #e5e5ea;
+}
+
+.profileAvatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 24px;
+  border: 4px solid white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.profileAvatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profileInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profileName {
+  font-size: 28px;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin-bottom: 8px;
+}
+
+.profileEmail {
+  font-size: 16px;
+  color: #86868b;
+  margin-bottom: 16px;
+}
+
+.profileBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.courseBadge {
+  background-color: rgba(94, 92, 230, 0.1);
+  color: #5e5ce6;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+}
+
+.gradeBadge {
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+}
+
+.gradeA {
+  background-color: rgba(52, 199, 89, 0.1);
+  color: #34C759;
+}
+
+.gradeB {
+  background-color: rgba(255, 149, 0, 0.1);
+  color: #FF9500;
+}
+
+.gradeC {
+  background-color: rgba(255, 204, 0, 0.1);
+  color: #FFCC00;
+}
+
+.gradeD, .gradeF {
+  background-color: rgba(255, 59, 48, 0.1);
+  color: #FF3B30;
+}
+
+.profileDetails {
+  padding: 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.detailsCard {
+  background-color: #f5f5f7;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.detailsTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e5e5ea;
+}
+
+.detailsRow {
+  display: flex;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.detailsRow:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.detailsLabel {
+  font-weight: 500;
+  color: #86868b;
+  width: 140px;
+  flex-shrink: 0;
+}
+
+.detailsValue {
+  flex: 1;
+  color: #1d1d1f;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 0;
+}
+
+.loadingSpinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(10, 132, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #0a84ff;
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.errorContainer, .notFoundContainer {
+  text-align: center;
+  padding: 48px 16px;
+}
+
+.errorMessage {
+  color: #ff3b30;
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.notFoundContainer h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin-bottom: 16px;
+}
+
+.notFoundContainer p {
+  color: #86868b;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  .profileHeader {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 24px;
+  }
+  
+  .profileAvatar {
+    margin-right: 0;
+    margin-bottom: 16px;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .profileBadges {
+    justify-content: center;
+  }
+  
+  .detailsRow {
+    flex-direction: column;
+  }
+  
+  .detailsLabel {
+    width: 100%;
+    margin-bottom: 4px;
+  }
+}
