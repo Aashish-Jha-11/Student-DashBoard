@@ -1,0 +1,145 @@
+.navbar {
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+}
+
+.logoLink {
+  text-decoration: none;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logoIcon {
+  font-size: 24px;
+}
+
+.logoText {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1d1d1f;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.navLink {
+  color: #1d1d1f;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.navLink:hover {
+  color: #0a84ff;
+}
+
+.navLink:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #0a84ff;
+  transition: width 0.2s ease;
+}
+
+.navLink:hover:after {
+  width: 100%;
+}
+
+.loginButton {
+  background-color: #0a84ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+}
+
+.loginButton:hover {
+  background-color: #007aff;
+}
+
+.userMenu {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.userEmail {
+  font-size: 14px;
+  color: #1d1d1f;
+  font-weight: 500;
+}
+
+.logoutButton {
+  background-color: transparent;
+  color: #ff3b30;
+  border: 1px solid #ff3b30;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.logoutButton:hover {
+  background-color: rgba(255, 59, 48, 0.1);
+}
+
+@media (max-width: 768px) {
+  .navContainer {
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+  }
+  
+  .navLinks {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  .userMenu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .logoText {
+    font-size: 16px;
+  }
+}
